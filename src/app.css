@@ -1,0 +1,324 @@
+css
+/* ======================================
+   GLOBAL
+====================================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #cede66;
+}
+
+
+/* ======================================
+   CONTAINER
+====================================== */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+
+/* ======================================
+   HEADER
+====================================== */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #3c0a23;
+}
+
+
+/* ======================================
+   CARD
+====================================== */
+
+.card {
+    background: rgb(46, 114, 81);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ======================================
+   FORM
+====================================== */
+
+.form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+input,
+select {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #b58b37;
+    border-radius: 5px;
+    outline: none;
+    background: rgb(27, 56, 59);
+}
+
+input:focus,
+select:focus {
+    border-color: #555;
+}
+
+
+/* ======================================
+   BUTTONS
+====================================== */
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    background: #333;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.secondary {
+    background: #777;
+}
+
+.edit {
+    background: #555;
+}
+
+.delete,
+.danger {
+    background: #b33;
+}
+
+
+/* ======================================
+   LISTS
+====================================== */
+
+ol {
+    padding-left: 25px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+
+/* ======================================
+   TOURNAMENT
+====================================== */
+
+.tournament {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.tournament-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.tournament-players {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.tournament-players h4 {
+    margin-top: 0;
+}
+
+
+/* ======================================
+   MATCH SYSTEM
+====================================== */
+
+.match {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.match h4 {
+    margin-top: 0;
+}
+
+.players {
+    font-size: 18px;
+    text-align: center;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+.winner-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.winner {
+    text-align: center;
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+.winner-buttons button.active {
+    background: #198754;
+}
+
+
+/* ======================================
+   RANKINGS
+====================================== */
+
+.ranking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ranking {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.rank {
+    font-size: 24px;
+    min-width: 45px;
+}
+
+.ranking-name {
+    flex: 1;
+    font-size: 17px;
+}
+
+.stats {
+    color: #666;
+}
+
+.ranking-section {
+    margin-bottom: 25px;
+}
+
+.rankings {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ranking-header,
+.ranking-row {
+    display: grid;
+    grid-template-columns: 70px 1fr 70px 70px;
+    gap: 10px;
+    align-items: center;
+    padding: 12px 15px;
+}
+
+.ranking-header {
+    font-weight: bold;
+    background: #f5f5f5;
+}
+
+.ranking-row {
+    border-top: 1px solid #eee;
+}
+
+
+/* ======================================
+   EMPTY
+====================================== */
+
+.empty {
+    color: #777;
+}
+
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .tournament-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ranking {
+        flex-wrap: wrap;
+    }
+
+    .ranking-header,
+    .ranking-row {
+        grid-template-columns: 50px 1fr 50px 60px;
+        font-size: 14px;
+    }
+}
